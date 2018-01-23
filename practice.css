@@ -6,8 +6,6 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  filter:brightness(140%);
-
 }
 
 nav{
@@ -80,7 +78,6 @@ h1.brandon {
   font-size: 40px;
   color: red;
   text-align: center;
-  
 
 }
 @font-face {
@@ -96,22 +93,18 @@ p.interests {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 1em;
   color: white;
-  letter-spacing: .1em;
-
 }
 
 h1.education {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 1em;
   color: white;
-  letter-spacing: .1em;
 }
 
 h1.courses {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 1em;
   color: white;
-  letter-spacing: .1em;
 }
 
 
@@ -122,7 +115,6 @@ div.contact {
   border-radius: 5px;
   margin-right: 70%;
   background-color: green;
-  letter-spacing: .1em;
 
 }
 div.education {
@@ -132,7 +124,6 @@ div.education {
   margin-right: 70%;
   background-color: green;
   padding: .5em;
-  letter-spacing: .1em;
 }
 div.interests {
   border: 5px solid;
@@ -141,7 +132,6 @@ div.interests {
   margin-right: 70%;
   background-color: green;
   padding: .5em;
-  letter-spacing: .1em;
 }
 
 div.courses {
@@ -151,7 +141,6 @@ div.courses {
   margin-right: 70%;
   background-color: green;
   padding: .5em;
-  letter-spacing: .1em;
 }
 
 li {
@@ -174,43 +163,19 @@ table {
 th, td {
     padding: 15px;
     color: red;
-
 }
 
 th {
   background-color: blue;
   color: white;
-
 }
 
 td {
   background-color: red;
   color: white;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 1em;
-  color: white;
-  letter-spacing: .1em;
-  font-weight: 900;
 }
 
 td.blue {
   background-color: blue;
   color: white;
-}
-
-th.car {
-  font-family: 'alex_brushregular';
-  src: url('alexbrush-regular-webfont.woff2') format('woff2'),
-       url('alexbrush-regular-webfont.woff') format('woff');
-  font-weight: 900;
-  font-style: normal;
-  letter-spacing: .1em;
-  font-size: 5em;
-  color: white;
-  text-shadow: 3px 2px red;
-}
-
-th.car:hover {
-    background-color: green;
-
 }
