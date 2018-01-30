@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Brandon Arbogast</title>
+  <img src="books.png" width="1000" id="dramatic" height="1000" alt="books 1">
+  <style>
+
+
+
+body {
+  background-color: green;
+}
+td {
+  background-color: red;
+  color: white;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1em;
+  color: white;
+  letter-spacing: .1em;
+  font-weight: 900;
+  padding: 2px;
+  text-shadow: 2px 2px blue;
+  line-height: 2em;
+}
+
+h1.courses {
+  text-align: center;
+  font-size: 3em;
+  letter-spacing: .1em;
+  font-family: 'alex_brushregular';
+  src: url('alexbrush-regular-webfont.woff2') format('woff2'),
+       url('alexbrush-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  color: red;
+  text-shadow: 2px 1px black;
+}
+
+
+
+@font-face {
+    font-family: 'alex_brushregular';
+    src: url('alexbrush-regular-webfont.woff2') format('woff2'),
+         url('alexbrush-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+  </style>
+  <script src="jquery-3.3.1.min.js"></script>
+  <script>
+  $(function() {
+    //setInterval(function() {
+    //  $("#paragraph").toggle();
+    //}, 200);
+
+    //$("#paragraph").hide();
+    //$("#paragraph").addClass("important");
+    //$("#paragraph").fadeIn(5000);
+
+    //$("#paragraph2").html("<i>Hello World!</i>");
+    // set value of input field
+    //$("#input_field").val("Hello World!");
+    // retrieve value from input field
+    //var text = $("#input_field").val();
+    // show value of input field in second paragraph
+    //$("#paragraph2").text("Content of input field is: " + text);
+    //$("#paragraph2").fadeOut(5000);
+
+    $("#button").click(function() {
+      var name = $("#input_field").val();
+      alert("your name is: " + name);
+      // grab name from input field
+      // add greeting to paragraph (use name in greeting)
+      $("#paragraph").text("Welcome, " + name + "!");
+      $("#paragraph").css("background-color", "red");
+      $("#paragraph").hide();
+      $("#paragraph").fadeIn(1000);
+    });
+
+    $("#paragraph2").mouseover(function() {
+      $(this).css("color", "blue");
+      //$("#paragraph2").css("color", "blue");
+    });
+
+    $("#paragraph2").mouseout(function() {
+      $(this).css("color", "black");
+      //$("#paragraph2").css("color", "blue");
+    });
+
+    $("#paragraph").mouseover(function() {
+      $(this).css("color", "red");
+      //$("#paragraph2").css("color", "blue");
+    });
+
+    $("#paragraph").mouseout(function() {
+      $(this).css("color", "black");
+      //$("#paragraph2").css("color", "blue");
+    });
+
+
+    $("#removeall").click(function() {
+      $(document.body).empty();
+      $(document.body).html("<ul><li>Item 1</li><li>Item 2</li></ul>");
+    });
+
+    $("#addrow").click(function() {
+      var firstname = $("#input_field").val();
+      var lastname = $("#input_field2").val();
+      $("#table").append("<tr><td>" + firstname + "</td><td>" + lastname + "</td></tr>");
+    });
+
+    $("div#onceHidden").show();
+    $("ol.switched").toggle(3000);
+    $("img").hide("slow");
+
+
+  });
+  </script>
+</head>
+<body>
+  <h1 class="courses">Courses</h1>
+  <p id="paragraph">Schedule information</p>
+  <p id="paragraph2">Study Time!!!!!!!!!!!!</p>
+  First Name: <input id="input_field"><br>
+  Last Name: <input id="input_field2"><br>
+  <button id="button">Click Me</button>
+  <button id="removeall">Remove all content</button><br>
+  <br>
+  <table id="table">
+    <tr>
+      <th class="subject">Subject</th>
+      <th class="Time">Time</th>
+    </tr>
+    <tr>
+      <td><i>Advanced Programming</i></td>
+      <td><i>Tuesday 6-9pm</i></td>
+    </tr>
+    <tr>
+      <td class="blue">Accounting 102</td>
+      <td class="blue"> Monday/Wednesday 11:20am-12:50pm </td>
+    </tr>
+    <tr>
+      <td><i>Principles Of Marketing</i></td>
+      <td><i>Tuesday/Thursday 9:40am-11:10am</i></td>
+    </tr>
+    <tr>
+      <td class="blue">Principles Of Management</td>
+      <td class="blue">Tuesday/Thursday 11:20am-12:50pm</td>
+    <tr>
+      <td class="blue">Server Management</td>
+      <td class="blue">Thursday 6-9pm</td>
+    </tr>
+  </table>
+    <button id="addrow">Add Row</button><br>
+
+
+
+
+</body>
+</html>

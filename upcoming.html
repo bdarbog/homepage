@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Brandon Arbogast</title>
+  <img src="stars2.jpg" width="10000" id="dramatic" height="10000" alt="stars2 1">
+  <style>
+
+
+body {
+  background-color: green;
+}
+td {
+  background-color: black;
+  color: white;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1em;
+  color: white;
+  letter-spacing: .1em;
+  font-weight: 900;
+  padding: 2px;
+  text-shadow: 1px 2px red;
+  line-height: 2em;
+
+}
+
+h1.upcoming {
+  text-align: center;
+  font-size: 3em;
+  letter-spacing: .1em;
+  font-family: 'alex_brushregular';
+  src: url('alexbrush-regular-webfont.woff2') format('woff2'),
+       url('alexbrush-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  color: red;
+  text-shadow: 2px 1px black;
+}
+
+
+
+@font-face {
+    font-family: 'alex_brushregular';
+    src: url('alexbrush-regular-webfont.woff2') format('woff2'),
+         url('alexbrush-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+  </style>
+  <script src="jquery-3.3.1.min.js"></script>
+  <script>
+  $(function() {
+    //setInterval(function() {
+    //  $("#paragraph").toggle();
+    //}, 200);
+
+    //$("#paragraph").hide();
+    //$("#paragraph").addClass("important");
+    //$("#paragraph").fadeIn(5000);
+
+    //$("#paragraph2").html("<i>Hello World!</i>");
+    // set value of input field
+    //$("#input_field").val("Hello World!");
+    // retrieve value from input field
+    //var text = $("#input_field").val();
+    // show value of input field in second paragraph
+    //$("#paragraph2").text("Content of input field is: " + text);
+    //$("#paragraph2").fadeOut(5000);
+
+    $("#button").click(function() {
+      var upcoming = $("#input_field").val();
+      alert("upcoming info: " + upcoming);
+      // grab name from input field
+      // add greeting to paragraph (use name in greeting)
+      $("#paragraph").text("Upcoming info:, " + upcoming + "!");
+      $("#paragraph").css("background-color", "orange");
+      $("#paragraph").hide();
+      $("#paragraph").slideDown(500);
+    });
+
+    $("#paragraph2").mouseover(function() {
+      $(this).css("color", "blue");
+      //$("#paragraph2").css("color", "blue");
+    });
+
+    $("#paragraph2").mouseout(function() {
+      $(this).css("color", "black");
+      //$("#paragraph2").css("color", "blue");
+    });
+
+    $("#paragraph").mouseover(function() {
+      $(this).css("color", "red");
+      //$("#paragraph2").css("color", "blue");
+    });
+
+    $("#paragraph").mouseout(function() {
+      $(this).css("color", "black");
+      //$("#paragraph2").css("color", "blue");
+    });
+
+
+    $("#removeall").click(function() {
+      $(document.body).empty();
+      $(document.body).html("<ul><li>Item 1</li><li>Item 2</li></ul>");
+    });
+
+    $("#addrow").click(function() {
+      var upcoming = $("#input_field").val();
+      $("#table").append("<tr><td>" + upcoming + "</td><td>");
+    });
+
+    $("div#onceHidden").show();
+    $("ol.switched").toggle(3000);
+    $("img").hide("fast");
+
+  });
+  </script>
+</head>
+<body>
+  <h1 class="upcoming">Upcoming</h1>
+  <p id="paragraph">Welcome</p>
+  <p id="paragraph2">Check it out!</p>
+  Upcoming: <input id="input_field"><br>
+  <button id="button">Click Me</button>
+  <button id="removeall">Remove all content</button><br>
+  <br>
+  <table id="table">
+    <tr>
+      <th class="upcoming">upcoming</th>
+    </tr>
+    <tr>
+      <td><i>Advanced Programming</i></td>
+    </tr>
+    <td><i>Jquery</i></td>
+  </tr>
+  </table>
+    <button id="addrow">Add Row</button><br>
+
+
+
+
+
+</body>
+</html>
