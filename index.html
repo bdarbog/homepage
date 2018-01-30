@@ -2,6 +2,15 @@
 <html>
 <head>
 <title>Brandon Arbogast</title>
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+$(function() {
+  $("#pick").change(function() {
+    var font = $(this).val();
+    $("#contact").css("font-family", font);
+  });
+});
+</script>
 <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
@@ -10,16 +19,29 @@
 <br>
 <nav>
       <ul>
-        <li class="nav"><a href="index.html"> Home </a></li>
+        <li class="nav"><a href="index.html"> Home </a></li> 
         <li class="nav"><a href="courses.html"> Courses </a></li>
-        <li class="nav"><a href="Interests.html"> Interests </a></li>
+        <li class="nav"><a href="interests.html"> Interests </a></li>
         <li class="nav"><a href="contactme.html"> Contact Me </a></li>
         <li class="nav"><a href="upcoming.html"> Upcoming </a></li>
       </ul>
     </nav>
+     <a href="http://bdarbog.it.pointpark.edu/homepage/index.html">Index</a>
+     <a href="http://bdarbog.it.pointpark.edu/homepage/courses.html">Courses</a>
+     <a href="http://bdarbog.it.pointpark.edu/homepage/interests.html">Interests</a>
+     <a href="http://bdarbog.it.pointpark.edu/homepage/contactme.html">contactme</a>
+     <a href="http://bdarbog.it.pointpark.edu/homepage/upcoming.html">upcoming</a>
+
 <br>
 <div class="contact">
-  <p>Contact Info:<br><br> Email: bdarbog@pointpark.edu</p></div>
+  <form id="form1">
+  <select id="pick">
+  <option value="0"> Select a font</option>
+  <option>Times New Roman</option>
+  <option>Arial</option>
+</select>
+</form>
+  <p id="contact">Contact Info:<br><br> Email: bdarbog@pointpark.edu</p>
 </div>
 <br>
 <div class="education">
@@ -30,7 +52,8 @@
 <div class="interests">
    <p>Interests:</p>
       <li>computer programming</li>
-      <li>Video games</li>
+      <li>video games</li>
+      <li>football</li>
       <li>reading </li>
   </div>
   <br>
@@ -41,7 +64,7 @@
    <li>principles of marketing</li>
    <li>principles of management</li>
    <li>server management</li>
-   <li>Accounting 102</li>
+   <li>accounting 102</li>
 </div>
 <br>
 
@@ -72,7 +95,7 @@
     <td class="blue">$1,200,000</td>
   </tr>
 </table>
- 
+
 
 
 
